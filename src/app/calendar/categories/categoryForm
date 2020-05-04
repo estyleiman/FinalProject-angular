@@ -1,0 +1,20 @@
+<form [formGroup]="categoryForm" >
+  
+  <div>
+      <label for="name">שם:</label>
+      <input type="text" id="Category_Name" name="Category_Name" formControlName="Category_Name"><br>
+      <label for="name">צבע:</label>
+      <input type="text" id="Category_Color" name="Category_Color" formControlName="Category_Color"><br>
+      <label for="name">עדיפות:</label>
+      <input type="text" id="Priority_Id" name="Priority_Id" formControlName="Priority_Id"><br>
+      <label for="name">קטגורית אב:</label>
+      <input type="text" id="Category_Parent_Code" name="Category_Parent_Code" formControlName="Category_Parent_Code"><br>
+  </div>
+  
+ 
+  <div>
+  <button class="btn btn-primary" [disabled]="!categoryForm.valid" (click)="saveCategory()">
+      save
+  </button>
+</div>
+</form>

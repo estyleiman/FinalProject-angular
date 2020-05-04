@@ -1,0 +1,61 @@
+<head>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+</head>
+
+<body >
+<br><br><br><br>
+
+<div class="container">
+   <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="panel panel-login">
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-lg-12">
+                <div *ngIf="loginOrNew==true">
+              <form id="login-form" action="#" method="post" role="form" style="display: block;">
+                <h2 class=text-right>התחברות</h2>
+               <div class="text-center">
+                 
+                  <div class="form-group">
+                    <input type="text" name="loginName" id="loginName" tabindex="1" class="form-control" [(ngModel)]="currentUser.loginName" placeholder="שם משתמש" value="">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" name="password" id="password" tabindex="2" class="form-control"  [(ngModel)]="currentUser.password " placeholder="סיסמא">
+                  </div>
+                
+                  <div class="col-xs-6 form-group pull-right">     
+                        <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" (click)="login()" value="התחברות">
+                  </div>
+                  <div class="col-xs-6 form-group pull-right">     
+                    <input type="submit"  tabindex="4" class="form-control btn btn-login " (click)="forget()" value="שכחתי סיסמא">
+              </div></div>
+              </form></div>
+              <div *ngIf="loginOrNew==false"> 
+                  <new-member></new-member>
+           
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="panel-heading">
+          <div class="row">
+            <div class="col-xs-6 tabs to-hover">
+              <a   class="active" (click)="toLogin()" id="login-form-link"><div class="login">כניסה</div></a>
+            </div>
+            <div class="col-xs-6 tabs to-hover">
+              <a  id="register-form-link" (click)="addNew()"><div class="register">משתמש חדש</div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+

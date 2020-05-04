@@ -1,0 +1,97 @@
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+    <!------ Include the above in your HEAD tag ----------></head>
+    
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+
+
+    <div class="text-center">
+    <div *ngIf="isNew==true">
+    <h4>  אנו שמחים שהחלטת להצטרף אלינו  </h4>
+    <h5>  הפרטים נשארים חסויים לאורך כל התהליך  </h5><br>
+<!-- </div> -->
+  <!--   <label for="float-input">תעודת זהות</label><br/>
+    <input type="text" pInputText id="id" [(ngModel)]="member.id" />
+    <br/><br/>
+    <label for="float-input">שם פרטי ושם משפחה</label><br/>
+    <input type="text" pInputText id="userName" [(ngModel)]="member.userName" />
+
+
+    <br/><br/>
+    <label for="float-input">מספר טלפון</label><br/>
+    <input type="text" pInputText id="phoneNumber" [(ngModel)]="member.phoneNumber" />
+    <br/><br/>
+    <label for="float-input"> כתובת מייל</label><br/>
+    <input type="email" pInputText id="email" [(ngModel)]="member.email" />
+    <br/><br/>
+    <label for="float-input">כתובת</label><br/>
+    <input label="רחוב,עיר"type="text" pInputText id="address" [(ngModel)]="member.address" />
+    <br/><br/><label for="float-input">סיסמא</label><br/>
+    <input type="text" pInputText id="password" [(ngModel)]="member.password" />
+    <br/><br>
+<div *ngIf="isNew==true">
+    <button type="button" class="btn btn-info" (click)="addMember()"  >שמירה</button> 
+
+</div> -->
+<br>
+       <div class="panel panel-login">
+        
+                <div class="col-md-12 col-md-offset-0.5"> 
+               
+                    <div class="form-group">
+                        <input type="text"  tabindex="1" class="form-control" placeholder="תעודת זהות" value="" [(ngModel)]="member.userId">
+                      </div>
+                      <div class="form-group">
+                        <input type="text"   tabindex="1" class="form-control" placeholder="שם משתמש" value="" [(ngModel)]="member.loginName">
+                      </div>
+                      <div class="form-group">
+                        <input type="text"  tabindex="1" class="form-control" placeholder="מספר טלפון" value="" [(ngModel)]="member.phone">
+                      </div>
+                      <!-- <div class="form-group">
+                        <input type="text"  tabindex="2" class="form-control" placeholder="כתובת מגורים (רחוב,עיר)" [(ngModel)]="member.address">
+                      </div> -->
+                      <div class="form-group">
+                        <input type="email" name="כתובת מייל " tabindex="1" class="form-control" placeholder="כתובת מייל" value="" [(ngModel)]="member.email">
+                      </div>
+                      <div class="form-group">
+                        <input type="text" name=" סיסמא"  tabindex="2" class="form-control" placeholder="סיסמא">
+                      </div>
+                     
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-sm-6 col-sm-offset-3">
+                            <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" (click)="addMember()"  value="הרשם עכשיו">
+                          </div>
+                        </div>
+                      </div>
+            </div>
+             
+        
+       </div>
+
+ 
+ <script>
+ 
+ 
+     $(function() {
+         $('#login-form-link').click(function(e) {
+             $("#login-form").delay(100).fadeIn(100);
+              $("#register-form").fadeOut(100);
+             $('#register-form-link').removeClass('active');
+             $(this).addClass('active');
+             e.preventDefault();
+         });
+         $('#register-form-link').click(function(e) {
+             $("#register-form").delay(100).fadeIn(100);
+              $("#login-form").fadeOut(100);
+             $('#login-form-link').removeClass('active');
+             $(this).addClass('active');
+             e.preventDefault();
+         });
+     
+     });
+     
+     </script>
